@@ -1,0 +1,88 @@
+/* Signup.module.css */
+
+.form-container {
+  padding: 120px;
+  color: #006BBB;
+}
+
+.input {
+  background-color: #E4F0F8;
+  border: none;
+  padding: 8px;
+  margin: 5px 0;
+  width: calc(50% - 10px); /* Two inputs in a row */
+  box-sizing: border-box;
+}
+
+.input::placeholder {
+  color: #006BBB;
+}
+
+#signup-header {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+  background-color: #E4F0F8;
+  /* Light blue background for buttons */
+  border: none;
+  /* Remove borders from buttons */
+  color: #006BBB;
+  /* Blue text color for buttons */
+  padding: 8px 16px;
+  cursor: pointer;
+  /* Pointer cursor on hover */
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* Remove default fieldset border */
+fieldset {
+  border: none;
+  margin: 10px 0;
+}
+
+/* Separate label for age question */
+.age-label {
+  display: block;
+  /* Make label block level for standalone line */
+  color: #006BBB;
+  /* Blue text color for label */
+  margin: 5px 0 10px;
+  /* Spacing around the label */
+}
+
+/* Style adjustments specifically for the age input field */
+.age-input {
+  margin-bottom: 20px;
+  /* Additional bottom margin for spacing */
+}
+
+/* Style for radio button groups */
+.radio-group {
+  margin-bottom: 10px;
+}
+
+/* Flexbox for placing inputs side by side */
+.input-pair {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px; /* Add a gap between input pairs */
+}
+
+/* Style adjustments for wide radio button groups */
+.radio-group {
+  width: 100%; /* Make each group take up equal width */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .input {
+    width: 100%;
+  }
+}

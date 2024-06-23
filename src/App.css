@@ -1,0 +1,336 @@
+/* For Fonts */
+@font-face {
+  font-family: 'HeaderFont';
+  src: url('./fonts/Header3.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SubstitleFont';
+  src: url('./fonts/Header2.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TextFont';
+  src: url('./fonts/Normal.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* For Welcome Page */
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.buttons-container {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  display: flex;
+  gap: 40px; 
+}
+
+.button {
+  font-family: 'TextFont', sans-serif;
+  padding: 10px 32px;
+  font-size: 23px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.button-yellow {
+  background-color: #FFE3B3;
+  color: #000000;
+}
+
+.button-blue {
+  background-color: #30A0E0;
+  color: #ffffff;
+}
+
+.welcome-heading {
+  font-family: 'HeaderFont', sans-serif;
+  font-size: 110px;
+  color: #006BBB;
+  margin-top: -10px;
+  margin-bottom: 5px;
+  text-shadow: 4px 4px 4px #30A0E0;
+}
+
+.slogan {
+  font-family: 'TextFont', sans-serif;
+  font-size: 40px;
+  color: #FFC872;
+  margin-top: -5px;
+}
+
+.logo {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 170px;
+  height: auto;
+}
+
+/* For Constant Sidebar
+ */
+#sidebar {
+  width: 30%;
+  background-color: #ffffff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  position: fixed;
+  z-index: 1000;
+}
+
+.sidebar-row {
+  margin-top: 10px;
+}
+
+.sidebar-row-icon {
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+  color: #FFE3B3;
+}
+
+.sidebar-row-button:hover {
+  background-color: #c4d3de;
+}
+
+.selected-sidebar-button {
+  color: #a0c2d8;
+}
+
+.edit-profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: 'HeaderFont', sans-serif;
+  font-size: 2em;
+  color: #30A0E0;
+  margin-bottom: 20px;
+}
+
+/* For Edit Profile */
+.edit-profile-form {
+  padding-top: 90px;
+  right: 300px;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+}
+
+.edit-profile-title {
+  align-self: flex-start;
+  align-items: left;
+  position: fixed;
+  top: 15px;
+  left: 20px;
+  padding-right: 80px;
+  font-family: 'HeaderFont', sans-serif;
+  color: #30A0E0;
+  text-shadow: 2px 2px 2px #FFC872;
+  font-size: 45px;
+}
+
+label {
+  font-family: 'TextFont', sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  color: #006BBB;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.submit-btn {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: #fff;
+  background-color: #006BBB;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* For Matches */
+.matches-container {
+  display: flex;
+  justify-content: right; 
+  display: flex;
+  overflow-x: scroll; 
+  scroll-snap-type: x mandatory;
+  padding-top: 30px;
+  right: -50px;
+
+}
+
+.matches-title {
+  align-self: flex-start;
+  align-items: left;
+  position: fixed;
+  top: 15px;
+  left: 20px;
+  padding-right: 80px;
+  font-family: 'HeaderFont', sans-serif;
+  color: #30A0E0;
+  text-shadow: 2px 2px 2px #FFC872;
+  font-size: 90px;
+}
+
+.small-title {
+  position: fixed;
+  top: 15px;
+  left: 20px;
+  font-size: 25px;
+  color: #006BBB;
+  font-family: 'HeaderFont';
+  text-shadow: 1px 1px 1px #30A0E0; 
+}
+
+.matches-container-background {
+  display: flex;
+  justify-content: right; 
+  overflow-y: auto;
+  padding-left: 20px;
+  height: 80%;
+}
+
+.matches-list {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap; 
+  padding-left: 100px;
+  padding-bottom: 100px;
+  overflow-y: hidden;
+  gap: 100px;
+}
+
+.match-card {
+  width: 400px; 
+  height: 400px; 
+  perspective: 1000px;
+  cursor: pointer;
+  background-color: hsl(206, 100%, 92%);
+  position: relative;
+  border-radius: 30px;
+  flex: 0 0 calc(33% - 20px);
+  margin: 10px;
+  scroll-snap-align: start;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  padding: 10px;
+  padding-top: 15px;
+}
+
+.match-card.flipped {
+  transform: rotateY(180deg);
+}
+
+.match-card .card-front,
+.match-card .card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  background-color: #E4F0F8;
+  border-color: #000000;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.match-card .card-front {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.match-card .card-front img {
+  width: 500px;
+  height: 500px;
+  height: auto;
+}
+
+.match-card .card-front p {
+  margin-top: 10px;
+}
+
+.match-card .card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #E4F0F8;
+  padding-bottom: 10px;
+  border-radius: 30px;
+}
+
+.match-card .card-back ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.match-card .card-back button {
+  background-color: #FFE3B3;
+  color: #000000;
+  font-size: 20px;
+  font-family: 'SubstitleFont', sans-serif;
+  border-radius: 5px;
+}
+
+.match-card li {
+  font-family: 'TextFont', sans-serif;
+  font-size: 18px;
+}
+
+.match-card h1 {
+  font-family: 'HeaderFont', sans-serif;
+  font-size: 32px;
+  color: #0056b3;
+}
+.match-card .card-back ul li {
+  margin-bottom: 10px;
+}
