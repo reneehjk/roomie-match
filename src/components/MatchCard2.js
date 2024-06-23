@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import '../App.css'; 
 
-const MatchCard2 = ({ name, imageUrl, age, gender, budget, pet, clean, social, alcnsmok, sleep, interest, contactE, contactN }) => {
+const MatchCard2 = ({ name, imageUrl, age, location, gender, budget, pet, clean, social, alcnsmok, sleep, interest, contactE, contactN }) => {
   const [flipped, setFlipped] = useState(false);
 
   const toggleFlip = () => {
@@ -19,6 +19,7 @@ const MatchCard2 = ({ name, imageUrl, age, gender, budget, pet, clean, social, a
       <div className={`card-back ${flipped ? '' : 'hidden'}`}>
         <h1>Additional Information</h1>
             <ul>
+                <li><strong>Location:</strong> {location}</li>
                 <li><strong>Gender:</strong> {gender}</li>
                 <li><strong>Budget:</strong> {budget}</li>
                 <li><strong>Pet:</strong> {pet}</li>

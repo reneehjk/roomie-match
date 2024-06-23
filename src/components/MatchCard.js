@@ -1,13 +1,27 @@
-// To display card on explore page
-
 import React, { useState } from 'react';
-import '../App.css'; 
 
-const MatchCard = ({ name, imageUrl, age, gender, budget, pet, clean, social, alcnsmok, sleep, interest }) => {
+const MatchCard = ({ id, name, imageUrl, age, location, gender, budget, pet, clean, social, alcnsmok, sleep, interest, onMatch }) => {
   const [flipped, setFlipped] = useState(false);
 
-  const toggleFlip = () => {
+  const toggleFlip = () => { 
     setFlipped(!flipped);
+  };
+
+  const handleMatch = () => {
+    onMatch({
+      id,
+      name,
+      imageUrl,
+      age,
+      gender,
+      budget,
+      pet,
+      clean,
+      social,
+      alcnsmok,
+      sleep,
+      interest
+    });
   };
 
   return (
@@ -18,7 +32,8 @@ const MatchCard = ({ name, imageUrl, age, gender, budget, pet, clean, social, al
       </div>
       <div className={`card-back ${flipped ? '' : 'hidden'}`}>
         <h1>Additional Information</h1>
-            <ul>
+        <ul>
+        <li><strong>Location:</strong> {location}</li>
                 <li><strong>Gender:</strong> {gender}</li>
                 <li><strong>Budget:</strong> {budget}</li>
                 <li><strong>Pet:</strong> {pet}</li>
@@ -27,8 +42,8 @@ const MatchCard = ({ name, imageUrl, age, gender, budget, pet, clean, social, al
                 <li><strong>Alcohol/smoking:</strong> {alcnsmok}</li>
                 <li><strong>Sleep schedule:</strong> {sleep}</li>
                 <li><strong>Interest:</strong> {interest}</li>
-            </ul>
-        <button>Match!</button>
+        </ul>
+        <button onClick={handleMatch}>Match!</button>
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ import background from '../assets/WBackground.png';
 import logo from '../assets/logo.png';
 
 const Welcome = () => {
+
     return (
         <div 
             className="welcome-container" 

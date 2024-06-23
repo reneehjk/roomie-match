@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Signup.module.css';
+import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 
 export default function Signup() {
@@ -10,45 +11,85 @@ export default function Signup() {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    console.log(data);
+  };
+  
+  // const [name, setName] = useState();
+  //   const [email, setEmail] = useState();
+  //   const [password, setPassword] = useState()
+  //   const [imageURL, setImageURL] = useState()
+  //   const [age, setAge] = useState()
+  //   const [gender, setGender] = useState()
+  //   const [budget, setBudget] = useState()
+  //   const [pet, setPet] = useState()
+  //   const [clean, setClean] = useState()
+  //   const [social, setSocial] = useState()
+  //   const [alcnsmoke, setAlcnsmoke] = useState()
+  //   const [sleep, setSleep] = useState()
+  //   const [interest, setInterest] = useState()
+  //   const match = "";
+  //   const navigate = useNavigate()
+        
+  //   const handleSubmit = (e) => {
+  //       e.preventDefault();
+  //       axios.post('http://localhost:3001/signup', {name, email, password, age, gender, budget, pet, clean, social, alcnsmoke, sleep, interest, match})
+  //       .then(result => {console.log(result)
+  //           navigate('/login')
+  //       })
+  //       .catch(err=> console.log(err))
+  //   }
 
   return (
     <div className={styles['form-container']}>
       <header id="signup-header">
-        <h1>Tell Us...</h1>
+        <h1>Sign Up!</h1>
       </header>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className={styles['input-pair']}>
+        <div className={styles['form-group']}>
+          <label>First Name</label>
           <input
             className={styles.input}
             {...register("firstName", { required: true })}
             placeholder="First Name"
+            
           />
+        </div>
+        <div className={styles['form-group']}>
+          <label>Last Name</label>
           <input
             className={styles.input}
             {...register("lastName", { required: true })}
             placeholder="Last Name"
           />
         </div>
-        <div className={styles['input-pair']}>
+        <div className={styles['form-group']}>
+          <label>Email</label>
           <input
             className={styles.input}
             {...register("email", { required: true, pattern: /^\S+@\S+\.\S+$/ })}
             placeholder="Email"
           />
+        </div>
+        <div className={styles['form-group']}>
+          <label>Phone Number</label>
           <input
             className={styles.input}
             {...register("phoneNumber", { required: true })}
             placeholder="Phone Number"
           />
         </div>
-        <div className={styles['input-pair']}>
+        <div className={styles['form-group']}>
+          <label>Password</label>
           <input
             type="password"
             className={styles.input}
             {...register("password", { required: true })}
             placeholder="Password"
           />
+        </div>
+        <div className={styles['form-group']}>
+          <label>Re-enter Password</label>
           <input
             type="password"
             className={styles.input}
@@ -58,75 +99,113 @@ export default function Signup() {
             placeholder="Re-enter Password"
           />
         </div>
-
-        <div className={styles['input-pair']}>
-          <fieldset className={`${styles['radio-group']} ${styles['radio-group-wide']}`}>
-            <legend>What best describes your gender?</legend>
-            <label><input type="radio" {...register("gender")} value="Female" /> Female</label>
-            <label><input type="radio" {...register("gender")} value="Male" /> Male</label>
-            <label><input type="radio" {...register("gender")} value="Non-binary" /> Non-binary</label>
-            <label><input type="radio" {...register("gender")} value="Other" /> Other</label>
-          </fieldset>
-
-          <fieldset className={`${styles['radio-group']} ${styles['radio-group-wide']}`}>
-            <legend>What gender are you comfortable living with?</legend>
-            <label><input type="radio" {...register("livingPreference")} value="Female-only" /> Female-only</label>
-            <label><input type="radio" {...register("livingPreference")} value="Male-only" /> Male-only</label>
-            <label><input type="radio" {...register("livingPreference")} value="No Preference" /> No Preference</label>
-            <label><input type="radio" {...register("livingPreference")} value="Other" /> Other</label>
-          </fieldset>
+        <div className={styles['form-group']}>
+          <label>Gender</label>
+          <input
+            className={styles.input}
+            {...register("gender", { required: true })}
+            placeholder="Gender (e.g., Female, Male, Non-binary)"
+          />
         </div>
-
-        <div className={styles['input-pair']}>
-          <label className={styles['age-label']}>What is your age? (whole numbers only)</label>
+        <div className={styles['form-group']}>
+          <label>Location</label>
+          <input
+            className={styles.input}
+            {...register("location", { required: true })}
+            placeholder="Location (City, State)"
+          />
+        </div>
+        <div className={styles['form-group']}>
+          <label>Age</label>
           <input
             className={`${styles.input} ${styles['age-input']}`}
             {...register("age", { required: true, pattern: /^\d+$/ })}
-            placeholder="0"
+            placeholder="Age"
             type="number"
           />
           {errors.age && <span>This field is required</span>}
-
-          <label>
-            Age preference (e.g., 25-30):
+        </div>
+        <div className={styles['form-group']}>
+          <label>What's your budget?</label>
+          <input
+            className={styles.input}
+            {...register("pets", { required: true })}
+            placeholder="Budget (eg. around 1000, around 2000, ...)"
+          />
+        </div>
+        <div className={styles['form-group']}>
+          <label>Do you have pets?</label>
+          <input
+            className={styles.input}
+            {...register("budget", { required: true })}
+            placeholder="Yes / No"
+          />
+        </div>
+        {watch('pets') === 'Yes' && (
+          <div className={styles['form-group']}>
+            <label>What kind of pets do you have?</label>
             <input
               className={styles.input}
-              {...register("agePreference", { required: true, pattern: /^\d+-\d+$/ })}
-              placeholder="25-30"
+              {...register("petTypes", { required: true })}
+              placeholder="List your pets (e.g., Cat, Dog, Bird, ...)"
             />
+          </div>  
+        )}
+        <div className={styles['form-group']}>
+          <label>How much do you prioritize cleanliness?</label>
+          <input
+            className={`${styles.input} ${styles['clean-input']}`}
+            {...register("clean", { required: true})}
+            placeholder="Cleanliness (eg. Basic Cleanliness, Deep Cleanliness, Sterile Cleanliness, ...)"
+          />
+          {errors.clean && <span>This field is required</span>}
+        </div>
+        <div className={styles['form-group']}>
+          <label>What is your sleep schedule?</label>
+          <input
+            className={`${styles.input} ${styles['sleep-input']}`}
+            {...register("sleep", { required: true })}
+            placeholder="Sleep Schedule (eg. Early Bird (10PM or earlier), Intermediate (10PM-1AM),  Night Owl (1AM or later)"
+          />
+          {errors.sleep && <span>This field is required</span>}
+        </div>
+        <div className={styles['form-group']}>
+          <label>Describe your social habits:</label>
+          <input
+            className={styles.input}
+            {...register("social", { required: true })}
+            placeholder="Social Habits (eg. extrovert, introvert, ...)"
+          />
+          {errors.social && <span>This field is required</span>}
+        </div>
+        <div className={styles['form-group']}>
+          <label>Do you smoke or consume alcohol?</label>
+          <input
+            className={styles.input}
+            {...register("alcnsmoke", { required: true })}
+            placeholder="Alcohol/Smoking Habits (eg. rarely, frequently, ...)"
+          />
+          {errors.alcnsmoke && <span>This field is required</span>}
+        </div>
+        <div className={styles['form-group']}>
+          <label>What are your interests?</label>
+          <input
+            className={styles.input}
+            {...register("interest", { required: true })}
+            placeholder="Interests (eg. movies, football, ...)"
+          />
+          {errors.interest && <span>This field is required</span>}
+        </div>
+        <div className={styles['form-group']}>
+          <label className={styles.checkboxLabel}>
+            <input
+              type="checkbox"
+              {...register("agreed", { required: true })}
+            />
+            <span>By agreeing to confirm your account, you are agreeing to share your contact information with your matches. (click button above)</span>
           </label>
-          {errors.agePreference && <span>Enter a valid age range</span>}
         </div>
-
-        <div className={styles['input-pair']}>
-          <fieldset className={styles['radio-group']}>
-            <legend>Do you have pets?</legend>
-            <label><input type="radio" {...register("pets")} value="Yes" /> Yes</label>
-            <label><input type="radio" {...register("pets")} value="No" /> No</label>
-          </fieldset>
-
-          {watch('pets') === 'Yes' && (
-            <fieldset className={`${styles['radio-group']} ${styles['radio-group-wide']}`}>
-              <legend>What kind of pets do you have?</legend>
-              <label><input type="checkbox" {...register("petTypes.cats")} /> Cats</label>
-              <label><input type="checkbox" {...register("petTypes.dogs")} /> Dogs</label>
-              <label><input type="checkbox" {...register("petTypes.birds")} /> Birds</label>
-              <label><input type="checkbox" {...register("petTypes.reptile")} /> Reptile</label>
-              <label><input type="checkbox" {...register("petTypes.other")} /> Other</label>
-            </fieldset>
-          )}
-          <div>
-            <fieldset className={`${styles['radio-group']} ${styles['radio-group-wide']}`}>
-              <legend>Are you okay with other pets?</legend>
-              <label><input type="radio" {...register("petPreference")} value="Yes" /> Yes</label>
-              <label><input type="radio" {...register("petPreference")} value="Cats Only" /> Cats Only</label>
-              <label><input type="radio" {...register("petPreference")} value="Dogs Only" /> Dogs Only</label>
-              <label><input type="radio" {...register("petPreference")} value="No" /> No</label>
-            </fieldset>
-          </div>
-        </div>
-        
-        <input type="submit" className={styles.button} />
+        <Link to="/explore" className={`${styles['submit-btn']} ${styles['btn']}`}>Confirm</Link>
       </form>
     </div>
   );

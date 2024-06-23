@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../App.css';
 
 
@@ -30,9 +31,12 @@ const EditProfile = () => {
 
     return (
         <div className="edit-profile-container">
-            <div className="small-title" >RoomieMatch</div>
-            <div className='edit-profile-title'>
-                <h1>Edit Profile</h1>
+            <div className="small-title">RoomieMatch</div>
+            <h1 className="matches-title">Edit Profile</h1>
+            <div className='side-bar-container'>
+                <p><Link to="/explore">Explore</Link></p>
+                <p><Link to="/viewmatches">View Matches</Link></p>
+                <p><Link to="/editprofile">Edit Profile</Link></p>
             </div>
             <form onSubmit={handleSubmit} className="edit-profile-form">
                 <label>
@@ -67,8 +71,12 @@ const EditProfile = () => {
                     Interests:
                     <input type="text" name="interests" value={profile.interests} onChange={handleChange} />
                 </label>
-                <button type="submit" className="submit-btn">Save</button>
+                <Link to="/explore" button type="submit" className="submit-btn">Save Changes</Link>
+                <Link to="/explore" className="cancel-btn">Cancel Changes</Link>          
             </form>
+            <div className="sign-out-button">
+                    <Link to="/login" className="btn btn-sign-out">Sign Out</Link>
+                </div>
         </div>
     );
 };
