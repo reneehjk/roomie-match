@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/roomie-match/static/css/main.e9a345c0.css",
-    "main.js": "/roomie-match/static/js/main.c6137ded.js",
+    "main.js": "/roomie-match/static/js/main.b7e2099b.js",
     "static/js/453.58a368db.chunk.js": "/roomie-match/static/js/453.58a368db.chunk.js",
     "static/media/Normal.ttf": "/roomie-match/static/media/Normal.68e86cce5b8c98f6305b.ttf",
     "static/media/Header2.ttf": "/roomie-match/static/media/Header2.45c88f84a40290791797.ttf",
@@ -12,11 +12,11 @@
     "static/media/MatchesBackground.png": "/roomie-match/static/media/MatchesBackground.b2153ff0bb246d3ba049.png",
     "index.html": "/roomie-match/index.html",
     "main.e9a345c0.css.map": "/roomie-match/static/css/main.e9a345c0.css.map",
-    "main.c6137ded.js.map": "/roomie-match/static/js/main.c6137ded.js.map",
+    "main.b7e2099b.js.map": "/roomie-match/static/js/main.b7e2099b.js.map",
     "453.58a368db.chunk.js.map": "/roomie-match/static/js/453.58a368db.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e9a345c0.css",
-    "static/js/main.c6137ded.js"
+    "static/js/main.b7e2099b.js"
   ]
 }
