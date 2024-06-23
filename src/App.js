@@ -15,6 +15,7 @@ const App = () => {
     return (
         <Router>
             <Routes>
+                <Route path="/roomie-match" element={<Welcome />} />
                 <Route path="/" element={<Welcome />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
