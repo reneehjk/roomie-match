@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/roomie-match/static/css/main.e9a345c0.css",
+    "main.js": "/roomie-match/static/js/main.c396b704.js",
+    "static/js/453.58a368db.chunk.js": "/roomie-match/static/js/453.58a368db.chunk.js",
+    "static/media/Normal.ttf": "/roomie-match/static/media/Normal.68e86cce5b8c98f6305b.ttf",
+    "static/media/Header2.ttf": "/roomie-match/static/media/Header2.45c88f84a40290791797.ttf",
+    "static/media/logo.png": "/roomie-match/static/media/logo.a110b5d9162f30e60f0c.png",
+    "static/media/Header3.ttf": "/roomie-match/static/media/Header3.691b4ef0e8996f89a639.ttf",
+    "static/media/ViewM.png": "/roomie-match/static/media/ViewM.68254a377ee255cd7f3b.png",
+    "static/media/WBackground.png": "/roomie-match/static/media/WBackground.4d9620d8e7b88171a1a1.png",
+    "static/media/MatchesBackground.png": "/roomie-match/static/media/MatchesBackground.b2153ff0bb246d3ba049.png",
+    "index.html": "/roomie-match/index.html",
+    "main.e9a345c0.css.map": "/roomie-match/static/css/main.e9a345c0.css.map",
+    "main.c396b704.js.map": "/roomie-match/static/js/main.c396b704.js.map",
+    "453.58a368db.chunk.js.map": "/roomie-match/static/js/453.58a368db.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e9a345c0.css",
+    "static/js/main.c396b704.js"
+  ]
+}
