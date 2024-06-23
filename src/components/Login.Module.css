@@ -4,25 +4,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Adjust height based on your design */
+  height: 100vh;
+  background-color: #f5f5f5;
 }
 
 .login-form {
-  width: 300px; /* Adjust width of the form box */
+  background-color: #fff;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for a subtle effect */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
 }
 
 .login-title {
   text-align: center;
-}
-
-.error-message {
-  color: red;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: 40px;
+  color: #30A0E0; 
 }
 
 .form-group {
@@ -30,24 +29,26 @@
 }
 
 .input-field {
-  width: 100%;
-  padding: 8px;
-  font-size: 16px;
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 5px 0;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
 .submit-btn {
-  display: block;
   width: 100%;
   padding: 10px;
-  text-align: center;
-  background-color: #007bff; /* Example button color */
+  background-color: #007bff;
   color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  display: block;
   text-decoration: none;
-  border-radius: 4px;
 }
 
 .submit-btn:hover {
-  background-color: #0056b3; /* Example button color on hover */
+  background-color: #0056b3;
 }

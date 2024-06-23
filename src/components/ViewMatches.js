@@ -56,7 +56,7 @@ function ViewMatches() {
                     ))}
                 </div>
                 <div className="sign-out-button">
-                    <Link to="/login" className="btn btn-sign-out">Sign Out</Link>
+                    <Link to="/" className="btn btn-sign-out">Sign Out</Link>
                 </div>
             </div>
         </div>

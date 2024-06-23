@@ -75,7 +75,7 @@ const EditProfile = () => {
                 <Link to="/explore" className="cancel-btn">Cancel Changes</Link>          
             </form>
             <div className="sign-out-button">
-                    <Link to="/login" className="btn btn-sign-out">Sign Out</Link>
+                    <Link to="/" className="btn btn-sign-out">Sign Out</Link>
                 </div>
         </div>
     );
