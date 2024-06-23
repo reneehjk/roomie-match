@@ -4,11 +4,9 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Welcome from './components/Welcome';
 import Login from './components/Login';
-import HelloPage from './components/Login';
 import Signup from './components/Signup';
 import ViewMatches from './components/ViewMatches';
 import Matches from './components/Matches';
-import Sidebar from './components/Sidebar';
 import EditProfile from './components/EditProfile';
 
 const App = () => {
